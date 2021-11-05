@@ -1,0 +1,55 @@
+.item {
+    overflow: auto;
+    margin-bottom: 16px;
+    width: 120px;
+    animation: threadskeleton 3s ease-in-out forwards infinite;
+  }
+  
+  .item ~ .item {
+    animation-delay: 300ms;
+  }
+  
+  .item ~ .item ~ .item {
+    animation-delay: 600ms;
+  }
+  
+  .item .avatar {
+    float: left;
+    width: 26px;
+    height: 26px;
+    margin-right: 6px;
+    background: #e0e0e0;
+    border-radius: 6px;
+  }
+  
+  .item .line {
+    float: left;
+    background: #e0e0e0;
+    width: 40px;
+    height: 8px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+  }
+  
+  .item .line ~ .line {
+    background: #eee;
+    width: 80px;
+  }
+  
+  @keyframes threadskeleton {
+    0%, 20% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    
+    40%, 85% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    100% {
+      opacity: 0;
+      transform: scale(0.6) translateY(0);
+    }
+  }

@@ -1,0 +1,96 @@
+body {
+    background-color: #fff;
+  }
+  
+  .skeleton-posts {
+    margin: auto;
+    width: 500px;
+    height: 100%;
+    background-color:#fff;
+    box-shadow: 0px 1px 6px 0 rgba(0,0,0,0.15);
+    margin-top: 24px;
+    border-radius: 3px;
+  }
+  
+    .skeleton-posts-header {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-content: center;
+      margin: 20px 20px 0;
+    }
+  
+    .skeleton-posts-information {
+      width: calc(100% - 65px - 20px);
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+      margin-left: 20px;
+    }
+    
+    .skeleton-posts-content {
+      margin: 20px;
+      display: flex;
+      flex-flow: column nowrap;
+      height: 160px;
+      justify-content: space-evenly;
+  }
+  
+      .skeleton-posts-content > div {
+        background-color: #f1f1f1;
+        height: 160px;
+        border-radius: 3px;
+  }
+  
+        .skeleton-posts-content > div:nth-child(1) {
+          width: 100%;
+        }
+  
+    .skeleton-posts-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 100%;
+      background-color: #f1f1f1;
+    }
+  
+    .skeleton-posts-userid {
+      width: 100%;
+      height: 14px;
+      border-radius: 3px;
+  }
+      
+      .skeleton-posts-userid_display {
+        background-color: #f1f1f1;
+      }
+   
+   .skeleton-posts-create-time {
+      width: 30%;
+      height: 14px;
+     border-radius: 3px;
+  }
+      
+      .skeleton-posts-create-time_display {
+        background-color: #f1f1f1;
+      }
+  
+  @keyframes shine {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .skeleton-shine {
+    overflow: hidden;
+    position: relative;
+  }
+  
+    .skeleton-shine::before {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: translateX(-100%);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+      animation: shine 2s infinite;
+    }
